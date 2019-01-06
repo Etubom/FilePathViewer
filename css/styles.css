@@ -1,3 +1,50 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
 .wrapper{
     border: 5px solid red;
+    
+}
+div{
+    border: 3px solid green;
+    padding: 20px;
+}
+.files{
+    display: flex;
+    flex-flow: row nowrap;    
+   justify-content:space-evenly; 
+}
+.files:hover{
+    background:grey;
+}
+.files:active{
+    background:black;
+    color:white;
+}
+.header{
+    display: flex;
+    flex-flow: row nowrap;
+    /* padding-left: 50px; */
+    justify-content: space-around;
+}
+p.files{
+    justify-content: space-around;
+}
+div p{
+    padding-left: 20px;
+}
+div label{
+    /* padding: 15px 20px; */
+    padding-right: 50px;
+}
+input{
+    padding: 20px 20px;
+}
+
+button{
+    border: 1px solid black;
+    background-color: transparent;
 }

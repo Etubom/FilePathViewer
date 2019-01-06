@@ -10,16 +10,56 @@
   </head>
   <body>
     <div class="wrapper">
-      <div><input type="checkbox" name="" /><Span>Selected</Span><i class="fas fa-download"></i><span>Download Selected</span></div>
-      <div>
-        <span>Name</span> <span>Device</span> <span>Path</span>
-        <span>Status</span>
+      <div class="top-section">
+          <input type="checkbox" name="toggleAll" id="toggleAll" 
+          onchange="toggleAllboxes(this)">
+          <label for="toggleAll">Selected<span class="count-display"><span></label>
+          <button>
+              <i class="fas fa-download"></i><p>Download Selected</p>
+            </button>
+        </div>
+      <div class=" header">
+        <p>Name</p>
+        <p>Device</p> 
+        <p>Path</p>
+        <p>Status</p>
       </div>
-      <div><input type="checkbox" name="" /></div>
-      <div><input type="checkbox" name="" /></div>
-      <div><input type="checkbox" name="" /></div>
-      <div><input type="checkbox" name="" /></div>
-      <div><input type="checkbox" name="" /></div>
+      <div class="files">
+          <input type="checkbox" name="smss" class="fileItem">
+        <label for="smss">smss.exe</label>
+        <p>Stark</p>
+        <p>\Device\HarddiskVolume2\Windows\System32\smss.exe</p>
+        <p class="status">scheduled</p>
     </div>
+      <div class="files">
+          <input type="checkbox" name="netsh" class="fileItem">
+        <label for="netsh">netsh.exe</label>
+        <p>Targaryen</p>
+        <p>\Device\HarddiskVolume2\Windows\System32\netsh.exe</p>
+        <p class="status">available</p>
+    </div>
+      <div class="files">
+          <input type="checkbox" name="uxtheme" class="fileItem">
+          <label for="uxtheme">uxtheme.dll</label>
+          <p>Lannister</p>
+          <p>\Device\HarddiskVolume1\Windows\System32\uxtheme.dll</p>
+          <p class="status">available</p>
+        </div>
+      <div class="files">
+          <input type="checkbox" name="cryptbase" class="fileItem">
+          <label for="cryptbase">cryptbase.dll</label>
+          <p>Martell</p>
+          <p>\Device\HarddiskVolume1\Windows\System32\cryptbase.dll</p>
+          <p class="status">scheduled</p>
+    </div>
+      <div class="files">
+        <input type="checkbox" name="7za" class="fileItem">
+        <label for="7za">7za.exe</label>
+        <p>Baratheon</p>
+        <p>\Device\HarddiskVolume1\temp\7za.exe</p>
+        <p class="status">scheduled</p>
+    </div>
+    </div>
+    <script src="./filepathviewer.js"></script>
   </body>
 </html>
