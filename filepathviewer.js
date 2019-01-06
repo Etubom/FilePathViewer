@@ -1,9 +1,21 @@
 const toggleAll = document.querySelector('input[id="toggleAll"]');
-console.log('toggleAll',toggleAll);
+
 const fileItems = document.querySelectorAll('.fileItem');
-console.log('fileitem',fileItems);
+let textAlert = document.querySelectorAll('.files').textContent;
+
+
  toggleAll.indeterminate = false;
- 
+
+function alertMessage(){
+fileItems.forEach(element => {
+    console.log('alertMsg',element);
+if(element.checked = true)
+{
+    console.log(textAlert)
+}
+})
+}
+
 function toggleAllboxes(mainController){
 fileItems.forEach(item =>{
     item.checked = mainController.checked;
@@ -11,7 +23,7 @@ fileItems.forEach(item =>{
 }
 
 fileItems.forEach(element => {
-    console.log("preventDefaultFunction",element);
+
    return  element.addEventListener('click', statusUpdater);
 });
 
@@ -23,10 +35,8 @@ function statusUpdater(){
             checkboxCounter++;
         }
     });
-    console.log('checkbox counter',checkboxCounter);
-    // return checkboxCounter;
     if(checkboxCounter === fileItems.length+1){
-        // console.log('updater in if block',updater);
+    
         toggleAll.checked = true;
         toggleAll.indeterminate = false;
     }  else if(checkboxCounter <= fileItems.length + 1 && checkboxCounter >1)
