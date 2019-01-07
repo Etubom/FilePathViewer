@@ -4,15 +4,12 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
-.wrapper{
-    border: 5px solid red;
-    
-}
+
 .top-section{
     display: flex;
 }
-div{
-    border: 3px solid green;
+div:not(.wrapper){
+    border: 3px solid lightgrey;
     padding: 20px;
 }
 .files{
@@ -33,6 +30,10 @@ div{
 }
 p.files{
     justify-content: space-around;
+}
+.counts{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 div p{
     padding-left: 20px;

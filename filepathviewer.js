@@ -1,20 +1,22 @@
 const toggleAll = document.querySelector('input[id="toggleAll"]');
-
+const showCount = document.querySelector('.counts');
 const fileItems = document.querySelectorAll('.fileItem');
-let textAlert = document.querySelectorAll('.files').textContent;
+let divTextContent = document.querySelectorAll('div.files').innerHTML;
 
 
  toggleAll.indeterminate = false;
 
+
 function alertMessage(){
 fileItems.forEach(element => {
-    console.log('alertMsg',element);
+
 if(element.checked = true)
-{
-    console.log(textAlert)
-}
+    {
+        console.log(divTextContent);
+    }
 })
 }
+
 
 function toggleAllboxes(mainController){
 fileItems.forEach(item =>{
